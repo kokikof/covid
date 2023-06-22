@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Информация</title>
+</head>
+<body style="font-family: 'Open Sans', sans-serif;">
+<body>
+    
+        
+    {% if error %}
+        <script type="text/javascript">
+                alert("Введены некорректные данные");
+        </script>
+    {% endif %}
+    <div class="borderr" style="border: 2px solid red; padding: 5px; margin-left: auto; margin-right: auto; width: 40em;font-size:25px; background: white">
+        <p>Информация о больнице </p>
+        <form>
+            Больница находится по адресу: Г.черняховск, ул.Ленина 3, в нашей больнице несколько стоек регистрации, присутствует электронная система талонов, больница укомпектована всеми специалистами.Стоят несколько аппаратов диагностической техники.Соблюдаются все санитарные нормы, так же у нас есть около 30 палат. Минимальное ожидание записи людей по талону.Так же больница укомлпктована несколькими машинами для вызова врачей на дом, что позволяет быстро оказать помощь в кратчайщие сроки.
+        </form>
+    </div>
+</body>
+<style>
+    html, body{
+        width: 100%;
+        height: 100%;
+    }
+    body{
+        background-image: url(https://gas-kvas.com/uploads/posts/2023-02/1675302445_gas-kvas-com-p-doktor-risunok-art-15.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    .borderr{
+        margin: auto;
+        text-align: center;
+    }
+    .down{
+        margin: auto;
+        text-align: center;
+        position: relative;
+        top: 65%;
+        font-size: 1.5vw;
+    }
+    .pop{
+        margin: auto;
+        text-align: left;
+        position: relative;
+        font-size:25px;
+    }
+    .inf{
+        margin: auto;
+        text-align: left;
+        position: relative;
+        font-size:25px;
+        top: left;
+    }
+    input{
+        width: 10vw;
+        height: 1.5vw;
+        margin-bottom: 5px;
+        border-radius:10px;
+        box-shadow: inset;
+        font-family:inherit;
+        font-size: inherit;
+    }
+    button{
+        width: 7vw;
+        height: 1.5vw;
+        background: #FF4742;
+        border: 1px solid #FF4742;
+        border-radius: 6px;
+        box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        display: inline-block;
+        font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+        font-size: 16px;
+        font-weight: 800;
+        line-height: 16px;
+        min-height: 40px;
+        outline: 0;
+        padding: 12px 14px;
+        text-align: center;
+        text-rendering: geometricprecision;
+        text-transform: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: middle;
+    }   
+    button:hover,
+    button:active {
+    background-color: initial;
+    background-position: 0 0;
+    color: #FF4742;
+    }
+
+    button:active {
+    opacity: .5;
+    }
+</style>
+<div class="down" style="padding: 5px; margin-left: auto; margin-right: auto;">
+    <p>Поддержка по заявкам: тел: 89431241311 E-mail:bol39zaivka@mail.ru</p>
+</div>
+    
+</html>

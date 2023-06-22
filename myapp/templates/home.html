@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Заявки</title>
+</head>
+<body style="font-family: 'Open Sans', sans-serif;">
+<body>
+    <form action="new_page/" target="_blank">
+        <button>Информация</button></form>
+    {% if error %}
+        <script type="text/javascript">
+                alert("Введены некорректные данные");
+        </script>
+    {% endif %}
+    <div class="borderr" style="border: 2px solid red; padding: 5px; margin-left: auto; margin-right: auto; width: 40em;font-size:25px;background:white;">
+        <p>Оставить заявку<br> Здесь вы сможете вызвать врача на дом, если есть подозрения на covid-19</p>
+        <form method='POST' action = '/send/'>
+            {% csrf_token %}
+            <input class="resultat" name = 'res' type='text' placeholder='Результат'><br>
+            <input class="fio" name = 'FIO' type='text' placeholder='ФИО'><br>
+            <input class="date" name = 'date' type='text' placeholder='Дата сдачи'><br>
+            <input class="pasport" name = 'pasport' type='text' placeholder='паспорт'><br><br>
+            <button type="submit">Отправить</button>
+        </form>
+        <br>
+        <p>Проверить результат<br> Если вы сдали тест на ковид то врач, должен был выдать вам ваш номер очереди, который вы вписываете.Если врач вам его не дал, то обращацтесь по телефону поддержки заявок.<p>
+        <form method='POST' action = '/check/'>
+            {% csrf_token %}
+            <input class="id" name='us_id' type = 'text' placeholder='Ваш номер заявки'><br><br>
+            <button type='submit'>Проверить</button>
+        </form>
+    <div/>
+        <p> Расписание врачей, по времени работы и кабинетам</p>
+    <div class = 'rasp' style = 'header'>
+        <form action="rosp/" target="_blank">
+            <button>Расписание</button></form>
+    <div/>
+    <div style="font-family: 'Open Sans', sans-serif;">
+        Контакты для справки:Регистратура-33-66-52,телефон горячей линии-8-800-200-0000,Гл.Врач-3-323-33,Минздрав - 1-23-434.
+    <div/>
+<body/>
+<style>
+    html, body{
+        width: 100%;
+        height: 100%;
+    }
+    body{
+        background-image: url(https://gas-kvas.com/uploads/posts/2023-02/1675302445_gas-kvas-com-p-doktor-risunok-art-15.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        
+    }
+    .rasp{
+        left:100%;
+    }
+    .borderr{
+        margin: auto;
+        text-align: center;
+    }
+    .down{
+        margin: auto;
+        text-align: center;
+        position: relative;
+        top: 65%;
+        font-size: 1.5vw;
+    }
+    .pop{
+        margin: auto;
+        text-align: left;
+        position: relative;
+        font-size:25px;
+    }
+    .inf{
+        margin: auto;
+        text-align: left;
+        position: relative;
+        font-size:25px;
+        top: left;
+    }
+    input{
+        width: 10vw;
+        height: 1.5vw;
+        margin-bottom: 5px;
+        border-radius:10px;
+        box-shadow: inset;
+        font-family:inherit;
+        font-size: inherit;
+    }
+    button{
+        width: 7vw;
+        height: 1.5vw;
+        background: #FF4742;
+        border: 1px solid #FF4742;
+        border-radius: 6px;
+        box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        display: inline-block;
+        font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+        font-size: 16px;
+        font-weight: 800;
+        line-height: 16px;
+        min-height: 40px;
+        outline: 0;
+        padding: 12px 14px;
+        text-align: center;
+        text-rendering: geometricprecision;
+        text-transform: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: middle;
+
+    }   
+    button:hover,
+    button:active {
+    background-color: initial;
+    background-position: 0 0;
+    color: #FF4742;
+    }
+
+    button:active {
+    opacity: .5;
+    }
+</style>
+
+<div class="down" style="padding: 5px; margin-left: auto; margin-right: auto;font-size:100%">
+    <p>Поддержка по заявкам: тел: 89431241311 E-mail:bol39zaivka@mail.ru<br>
+    В случае положительного теста обращатся по номеру-4-232-43</p>
+</div>
+    
+</html>
